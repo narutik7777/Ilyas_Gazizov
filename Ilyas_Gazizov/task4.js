@@ -1,14 +1,10 @@
 function reverseString(str) {
-var strToArray = str.split("");
-
-var reverseArray = strToArray.reverse();
-
-var WordArray = reverseArray.join("");
-
-var reverseString = WordArray.toString();
-
-return reverseString;
-
+return  str.split(' ')
+    .map(function (el) {
+          return el.split ('').reverse().join('');
+    })
+    .join(' ');
 }
 
-console.log(reverseString("Feel"));
+
+console.log(reverseString(" A fun little challenge! "));
